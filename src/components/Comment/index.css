@@ -1,0 +1,10 @@
+.card{
+    margin: 10px 0px;
+}
+
+.card-content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 100%;
+}

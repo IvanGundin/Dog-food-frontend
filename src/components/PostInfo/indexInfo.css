@@ -1,0 +1,73 @@
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.formAutor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardInfo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.card__title{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__comment{
+    padding: 0 !important;
+}
+
+.comments {
+    font-size: 135%;
+}
+
+.card__about {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-content: center;
+    height: 150%;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.card__author {
+    position: relative;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.add-comment{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 500px;
+
+}
+
+.grid{
+    padding: 50px;
+    align-content: center;
+    min-width: 500px;
+}

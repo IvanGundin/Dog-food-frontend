@@ -1,0 +1,24 @@
+.userContainer {
+    display: flex;
+    /* flex-direction: column; */
+    align-content: center;
+    align-items: flex-end;
+    min-width: 200px;
+}
+
+.chipOne {
+    position: relative;
+    right: -10px;
+    /* top: 15px; */
+}
+
+.chipTwo {
+    position: relative;
+    right: -30px;
+}
+
+.add {
+    position: relative;
+    top: 3px;
+    right: 15px;
+}

@@ -1,0 +1,10 @@
+.logo {
+   
+    width:40px;
+    height: 40px;
+}
+
+.logoCont{
+    position: relative;
+    top: 5px;
+}
