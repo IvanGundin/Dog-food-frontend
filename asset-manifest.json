@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Dog-food-frontend/static/css/main.a27bbf59.css",
+    "main.js": "/Dog-food-frontend/static/js/main.2dff684b.js",
+    "static/media/logoName.svg": "/Dog-food-frontend/static/media/logoName.4f9d699de55eb25e196ecc4c87a15a5e.svg",
+    "static/media/instagram.svg": "/Dog-food-frontend/static/media/instagram.54cbf40d1b69370b6a2ec029eefc269c.svg",
+    "static/media/vk.svg": "/Dog-food-frontend/static/media/vk.5a6b12bf142f67e2138c1e6c69952975.svg",
+    "static/media/viber.svg": "/Dog-food-frontend/static/media/viber.b4234cd18a8ffefb8ebb172506996cea.svg",
+    "static/media/whatsapp.svg": "/Dog-food-frontend/static/media/whatsapp.51cbd71440eaa90946070b8848c12129.svg",
+    "static/media/ic-close-input.svg": "/Dog-food-frontend/static/media/ic-close-input.f01e03cf609912dcdf78b1a91e354837.svg",
+    "index.html": "/Dog-food-frontend/index.html",
+    "static/media/telegram.svg": "/Dog-food-frontend/static/media/telegram.95a5ca8a1ae0a13c18da2bca3f249bf5.svg",
+    "main.a27bbf59.css.map": "/Dog-food-frontend/static/css/main.a27bbf59.css.map",
+    "main.2dff684b.js.map": "/Dog-food-frontend/static/js/main.2dff684b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a27bbf59.css",
+    "static/js/main.2dff684b.js"
+  ]
+}
