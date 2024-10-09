@@ -90,7 +90,7 @@ export const PostInfo = ({ changePost, favorites, setFavorites }) => {
     const deletePost = () => {
         api.deletePost(params.itemId)
             .then((data) => {
-                alert('Вы удалили пост')
+                alert('Вы удалили товар')
                 changePost((prevState) => {
                     return prevState.filter((post) => post._id !== params.itemId);
                 })
@@ -119,8 +119,8 @@ export const PostInfo = ({ changePost, favorites, setFavorites }) => {
     }
 
     const button = <>
-        <Button onClick={handleClickOpenEdit} variant="contained" color='primary' size='small' style={{ marginRight: '20px' }}><EditIcon />Редактировать пост</Button>
-        <Button onClick={handleClik} variant="contained" color='primary' size='small'><DeleteForever />Удалить пост</Button>
+        <Button onClick={handleClickOpenEdit} variant="contained" color='primary' size='small' style={{ marginRight: '20px' }}><EditIcon />Редактировать товар</Button>
+        <Button onClick={handleClik} variant="contained" color='primary' size='small'><DeleteForever />Удалить товар</Button>
     </>
 
     return (
@@ -209,13 +209,13 @@ export const PostInfo = ({ changePost, favorites, setFavorites }) => {
             {(favorites?.includes(post?._id)) ? (
                 <Snackbar open={open} autoHideDuration={1500} onClose={handleClose}>
                     <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-                        Пост "{post?.author?.name}" добавлен в избранное!
+                        Товар "{post?.author?.name}" добавлен в избранное!
                     </Alert>
                 </Snackbar>
             ) : (
                 <Snackbar open={open} autoHideDuration={1500} onClose={handleClose}>
                     <Alert onClose={handleClose} severity="warning" sx={{ width: '100%' }}>
-                        Пост "{post?.author?.name}" удален из избранного!
+                        Товар "{post?.author?.name}" удален из избранного!
                     </Alert>
                 </Snackbar>
             )}

@@ -34,7 +34,7 @@ export const CreatePost = ({ changePost }) => {
         <form onSubmit={handleSubmit}>
             <Grid container flexDirection='column' alignItems='center' spacing='15'>
                 <Grid item>
-                    <h2>Создайте новый пост</h2>
+                    <h2>Предложите ваш товар</h2>
                 </Grid>
                 <Grid item>
                     <TextField fullWidth multiline required label='Название' name='title' variant='outlined' style={{ width: '15em' }} />
@@ -58,7 +58,7 @@ export const CreatePost = ({ changePost }) => {
                 </Grid>
                 <Grid item>
                     <Button type='submit' variant='contained' color='secondary' size='small'>
-                        Добавить пост
+                        Добавить товар
                     </Button>
                 </Grid>
             </Grid>

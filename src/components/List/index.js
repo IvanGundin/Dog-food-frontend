@@ -13,8 +13,7 @@ export const List = ({ favorites, setFavorites }) => {
           post={item}
           isInFavorites={favorites?.includes(item._id)}
           setFavorites={setFavorites}
-        />
-      ))}
+        />))}
     </div>
   )
 }

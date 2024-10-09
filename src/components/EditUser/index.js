@@ -18,18 +18,19 @@ export const EditUser = () => {
         myUser && setUserImg(myUser.avatar)
     }, [myUser])
     const handClick = () => {
-        api.editUserData({ name: userName, about: userAbout }, localStorage.getItem('token')).then((data) => {
-            api.editUserImg({ avatar: userImg }, localStorage.getItem('token'))
-                .then((data) => {
-                    setMyUser(data);
-                    navigate(-1);
-                })
-                .catch(err => {
-                    if (err == '400') {
-                        alert('Введите правильную ссылку на картинку.')
-                    }
-                })
-        })
+        api.editUserData({ name: userName, about: userAbout }, localStorage.getItem('token'))
+            .then((data) => {
+                api.editUserImg({ avatar: userImg }, localStorage.getItem('token'))
+                    .then((data) => {
+                        setMyUser(data);
+                        navigate(-1);
+                    })
+                    .catch(err => {
+                        if (err === '400') {
+                            alert('Введите правильную ссылку на картинку.')
+                        }
+                    })
+            })
             .catch(err => alert(err))
         api.editUserImg({ avatar: userImg })
             .then((data) => {

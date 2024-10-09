@@ -108,7 +108,6 @@ export const Card = ({ post, isInFavorites, setFavorites }) => {
               <FavoriteBorderOutlinedIcon /> {post.likes.length}
             </IconButton>
           )}
-          {/* <div>{post?.created_at}</div> */}
           <div>{post?.created_at &&
             new Date(post.created_at).toLocaleDateString('ru-RU', {
               day: '2-digit',
@@ -120,13 +119,13 @@ export const Card = ({ post, isInFavorites, setFavorites }) => {
       {isInFavorites ? (
         <Snackbar open={open} autoHideDuration={1500} onClose={handleClose}>
           <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-            Пост "{post?.author?.name}" добавлен в избранное!
+            Товар "{post?.author?.name}" добавлен в избранное!
           </Alert>
         </Snackbar>
       ) : (
         <Snackbar open={open} autoHideDuration={1500} onClose={handleClose}>
           <Alert onClose={handleClose} severity="warning" sx={{ width: '100%' }}>
-            Пост "{post?.author?.name}" удален из избранного!
+            Товар "{post?.author?.name}" удален из избранного!
           </Alert>
         </Snackbar>
       )}

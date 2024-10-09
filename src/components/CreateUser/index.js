@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Grid, TextField, Button, Typography } from '@mui/material';
-
 import { useApi } from '../../hooks/useApi';
 import { useNavigate } from 'react-router-dom';
 
@@ -12,31 +11,31 @@ export const CreateUser = ({ setUserToken }) => {
     const [userAbout, setUserAbout] = useState('');
     const [userPassword, setUserPassword] = useState('');
     const [error, setError] = useState('');
-
     const handleClick = () => {
-        api.auth('signup', { email: userEmail, password: userPassword })
+        api.authCreateUser('signup', { email: userEmail, group: "group-1", password: userPassword })
             .then((data) => {
+                localStorage.setItem('token', data.token);
+                setUserToken(data.token);
+            }).then(() => {
                 api.auth('signin', { email: userEmail, password: userPassword })
                     .then((data) => {
                         localStorage.setItem('token', data.token);
                         setUserToken(data.token);
-                        api.editUserData({ name: userName, about: userAbout }, data.token)
+                    }).then(() => {
+                        api.editUserData({ name: userName, about: userAbout }, localStorage.getItem('token'))
                         navigate('/')
                     })
-            })
-            .catch((err) => {
+            }).catch((err) => {
                 switch (err) {
                     case '400': setError('Данные введены неверно');
                         break;
                     case '409': setError('Пользователь с email существует');
                         break;
                     default:
-                        alert("Нет альтернативы");
+                        alert("Что-то пошло не так");
                 }
-
-            });
+            })
     }
-
     return (
         <div>
             <Grid container flexDirection='column' spacing='10'>
@@ -48,8 +47,8 @@ export const CreateUser = ({ setUserToken }) => {
                         fullWidth
                         label='e-mail'
                         variant='outlined'
-                        type='email'
                         value={userEmail}
+                        type='email'
                         onChange={({ target }) => {
                             setUserEmail(target.value);
                         }}
@@ -92,10 +91,6 @@ export const CreateUser = ({ setUserToken }) => {
                 <Grid item>
                     <Button onClick={handleClick} variant='contained' color='secondary' size='small'>
                         Войти
-                    </Button>
-
-                    <Button onClick={(e) => navigate('/')} color='secondary' size='small'>
-                        Я уже зарегистрирован
                     </Button>
                 </Grid>
             </Grid>

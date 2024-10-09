@@ -124,6 +124,18 @@ class Api {
         return result;
     }
 
+    async authCreateUser(type, data) {
+        const responce = await fetch(`${this._url}/${type}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data),
+        });
+        const result = await onResponce(responce);
+        return result;
+    }
+    
     async editUserData(data, token) {
         const useToken = this.token || token || localStorage.token;
         const responce = await fetch(`${this._url}/users/me`, {
@@ -145,17 +157,6 @@ class Api {
                 authorization: `Bearer ${useToken}`,
                 "Content-Type": "application/json"
             },
-        });
-        const result = await onResponce(responce);
-        return result;
-    }
-    async changeUserPassword(user, token, data) {
-        const responce = await fetch(`${this._url}/password-reset/${user}/${token}`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data),
         });
         const result = await onResponce(responce);
         return result;

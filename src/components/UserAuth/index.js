@@ -24,7 +24,6 @@ export const UserAuth = ({ setUserToken }) => {
     const [userPassword, setUserPassword] = useState('');
     const [error, setError] = useState('error');
     const [open, setOpen] = React.useState(false);
-
     const handleClose = () => {
         setOpen(false);
     };
@@ -46,7 +45,6 @@ export const UserAuth = ({ setUserToken }) => {
                     default:
                         alert("Нет альтернативы");
                 }
-
             });
     }
     return (
@@ -89,7 +87,7 @@ export const UserAuth = ({ setUserToken }) => {
                         </Button>
                     </Grid>
                     <Grid item xs={6}>
-                        <Button onClick={(e) => navigate('/createuser')} style={{ marginLeft: '20px' }} color='secondary' size='small'>
+                        <Button onClick={(e) => navigate('/react/createuser')} style={{ marginLeft: '20px' }} color='secondary' size='small'>
                             Регистрация
                         </Button>
                     </Grid>

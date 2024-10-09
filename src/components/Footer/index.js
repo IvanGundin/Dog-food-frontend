@@ -12,7 +12,7 @@ export const Footer = () => {
             <div className='container'>
                 <div className='footer__wrapper'>
                     <div className='footer__col'>
-                        <Logo className='logo footer__logo' href='#' title='Логотип' />
+                        <Logo className='logo footer__logo' href='/' title='Логотип' />
                         <p className='footer__copyright'>© «Интернет-магазин натуральных лакомств для собак»</p>
                     </div>
                     <div className='footer__col'>

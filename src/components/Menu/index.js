@@ -7,7 +7,6 @@ import UserContext from '../../contexts/UserContext';
 import { sort } from '../../hooks/sort'
 import { useApi } from '../../hooks/useApi';
 import './index.css';
-import { Divider } from '@mui/material';
 
 export const Menu = () => {
   const api = useApi();
@@ -84,10 +83,9 @@ export const Menu = () => {
   return (
     <div className='menu'>
       <div className='sort'>
-        <Button color='info' onClick={allPosts}>Все посты</Button>
-        <Button color='info' onClick={myPosts}>Мои посты</Button>
+        <Button color='info' onClick={allPosts}>Все товары</Button>
+        <Button color='info' onClick={myPosts}>Мои товары</Button>
         <Button color='info' onClick={favoritePosts}>Избранное</Button>
-        {/* <Divider orientation='middle' /> */}
         <Button color='info' onClick={sortByDate}>{sortDate && <FilterListIcon className={('sort__icon-' + sortDate)} />}По дате</Button>
         <Button color='info' onClick={sortByTitle}>{sortTitle && <FilterListIcon className={('sort__icon-' + sortTitle)} />}По заголовку</Button>
         <Button color='info' onClick={sortByLikes}>{sortLikes && <FilterListIcon className={('sort__icon-' + sortLikes)} />}По популярности</Button>

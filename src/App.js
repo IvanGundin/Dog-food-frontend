@@ -64,7 +64,7 @@ function App() {
         })
         .catch((err) => console.log(err))
     } else {
-      navigate('auth')
+      navigate('authFront')
     }
   }, [userToken])
   useEffect(() => {
@@ -93,16 +93,16 @@ function App() {
                 <Route path="/" element={
                   <div>
                     <Menu />
-                    <Pagination onChange={(page) => { setPageNumber(page) }} current={pageNumber} pageSize={12} showTotal={total => `Всего ${total} постов:`} total={posts.length}
+                    <Pagination onChange={(page) => { setPageNumber(page) }} current={pageNumber} pageSize={12} showTotal={total => `Всего ${total} товаров:`} total={posts.length}
                       style={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'center' }} />
                     <List favorites={favorites} setFavorites={setFavorites} />
-                    <Pagination onChange={(page) => { setPageNumber(page) }} current={pageNumber} pageSize={12} showTotal={total => `Всего ${total} постов:`} total={posts.length}
+                    <Pagination onChange={(page) => { setPageNumber(page) }} current={pageNumber} pageSize={12} showTotal={total => `Всего ${total} товаров:`} total={posts.length}
                       style={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'center', marginTop: '10px', marginBottom: '10px' }} />
                   </div>
                 } />
                 <Route path="posts/create" element={<CreatePost changePost={setPosts} />} />
                 <Route path="posts/:itemId" element={<PostInfo changePost={setPosts} favorites={favorites} setFavorites={setFavorites} />} />
-                <Route path="auth" element={<UserAuth setUserToken={setUserToken} />} />
+                <Route path="authFront" element={<UserAuth setUserToken={setUserToken} />} />
                 <Route path="createuser" element={<CreateUser setUserToken={setUserToken} />} />
                 <Route path='user/edit' element={<EditUser />} />
               </Routes>

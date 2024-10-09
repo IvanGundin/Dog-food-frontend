@@ -15,7 +15,7 @@ export const AddPost = () => {
     const logout = () => {
         localStorage.clear();
         setMyUser(null)
-        navigate('auth');
+        navigate('authFront');
     }
     const navigateEditUser = () => {
         navigate('user/edit');
