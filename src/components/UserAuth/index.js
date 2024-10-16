@@ -33,7 +33,7 @@ export const UserAuth = ({ setUserToken }) => {
             .then((data) => {
                 localStorage.setItem('token', data.token);
                 setUserToken(data.token);
-                navigate('/')
+                navigate('/react')
             })
             .catch((err) => {
                 switch (err) {
@@ -87,7 +87,7 @@ export const UserAuth = ({ setUserToken }) => {
                         </Button>
                     </Grid>
                     <Grid item xs={6}>
-                        <Button onClick={(e) => navigate('createuser')} style={{ marginLeft: '20px' }} color='secondary' size='small'>
+                        <Button onClick={(e) => navigate('/react/createuser')} style={{ marginLeft: '20px' }} color='secondary' size='small'>
                             Регистрация
                         </Button>
                     </Grid>

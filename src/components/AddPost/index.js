@@ -5,20 +5,19 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import Button from '@mui/material/Button';
 import UserContext from '../../contexts/UserContext';
 import './index.css'
-
 export const AddPost = () => {
     const navigate = useNavigate();
     const navigatToCreatePage = () => {
-        navigate('posts/create')
+        navigate('react/posts/create')
     };
     const { myUser, setMyUser } = useContext(UserContext);
     const logout = () => {
         localStorage.clear();
         setMyUser(null)
-        navigate('authFront');
+        navigate('react/authFront');
     }
     const navigateEditUser = () => {
-        navigate('user/edit');
+        navigate('react/user/edit');
     }
     return (
         <div>

@@ -25,7 +25,7 @@ export const CreatePost = ({ changePost }) => {
         })
             .then((data) => {
                 changePost((prevState) => [data, ...prevState]);
-                navigate('/')
+                navigate('/react')
             })
             .catch((err) => alert(err));
     };
@@ -62,7 +62,7 @@ export const CreatePost = ({ changePost }) => {
                     </Button>
                 </Grid>
             </Grid>
-            <Link to='/'><Button variant="contained" color='primary' size='small' style={{ margin: '20px' }}><KeyboardBackspaceIcon />назад</Button></Link>
+            <Link to='/react'><Button variant="contained" color='primary' size='small' style={{ margin: '20px' }}><KeyboardBackspaceIcon />назад</Button></Link>
         </form >
     )
 }

@@ -23,7 +23,7 @@ export const CreateUser = ({ setUserToken }) => {
                         setUserToken(data.token);
                     }).then(() => {
                         api.editUserData({ name: userName, about: userAbout }, localStorage.getItem('token'))
-                        navigate('/')
+                        navigate('/react')
                     })
             }).catch((err) => {
                 switch (err) {

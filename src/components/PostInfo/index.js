@@ -94,7 +94,7 @@ export const PostInfo = ({ changePost, favorites, setFavorites }) => {
                 changePost((prevState) => {
                     return prevState.filter((post) => post._id !== params.itemId);
                 })
-                navigate('/')
+                navigate('/react')
             })
             .catch((err) => alert(err));
 
@@ -128,7 +128,7 @@ export const PostInfo = ({ changePost, favorites, setFavorites }) => {
             <AlertDialog open={openDeleteDialog} setOpen={setOpenDeleteDialog} item={post} deletePost={deletePost} />
             <EditPost openEdit={openEdit} setOpenEdit={setOpenEdit} post={post} setPost={setPost} />
             <div>
-                <Link to='/'><Button variant="contained" color='primary' size='small' style={{ margin: '20px' }}><KeyboardBackspaceIcon />назад</Button></Link>
+                <Link to='/react'><Button variant="contained" color='primary' size='small' style={{ margin: '20px' }}><KeyboardBackspaceIcon />назад</Button></Link>
                 <form className='form'>
                     <CardMUI className='cardInfo' sx={{ width: '1100px', height: 'auto', background: 'rgba(248, 240, 241, 0.987)' }}>
                         <div>
@@ -204,7 +204,7 @@ export const PostInfo = ({ changePost, favorites, setFavorites }) => {
                         <Button onClick={addComment} variant="contained" color='primary' size='small'>Отправить</Button>
                     </div>
                 </form >
-                <Link to='/'><Button variant="contained" color='primary' size='small' style={{ margin: '20px' }}><KeyboardBackspaceIcon />назад</Button></Link>
+                <Link to='/react'><Button variant="contained" color='primary' size='small' style={{ margin: '20px' }}><KeyboardBackspaceIcon />назад</Button></Link>
             </div>
             {(favorites?.includes(post?._id)) ? (
                 <Snackbar open={open} autoHideDuration={1500} onClose={handleClose}>

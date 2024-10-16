@@ -7,7 +7,6 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 export const AlertDialog = ({ open, setOpen, item, deletePost }) => {
-
   const handleClose = () => {
     setOpen(false);
   };

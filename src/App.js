@@ -64,7 +64,7 @@ function App() {
         })
         .catch((err) => console.log(err))
     } else {
-      navigate('authFront')
+      navigate('react/authFront')
     }
   }, [userToken])
   useEffect(() => {
@@ -90,7 +90,7 @@ function App() {
                 </div>
               </Header>
               <Routes>
-                <Route path="/" element={
+                <Route path="/react" element={
                   <div>
                     <Menu />
                     <Pagination onChange={(page) => { setPageNumber(page) }} current={pageNumber} pageSize={12} showTotal={total => `Всего ${total} товаров:`} total={posts.length}
@@ -100,11 +100,11 @@ function App() {
                       style={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'center', marginTop: '10px', marginBottom: '10px' }} />
                   </div>
                 } />
-                <Route path="posts/create" element={<CreatePost changePost={setPosts} />} />
-                <Route path="posts/:itemId" element={<PostInfo changePost={setPosts} favorites={favorites} setFavorites={setFavorites} />} />
-                <Route path="authFront" element={<UserAuth setUserToken={setUserToken} />} />
-                <Route path="createuser" element={<CreateUser setUserToken={setUserToken} />} />
-                <Route path='user/edit' element={<EditUser />} />
+                <Route path="react/posts/create" element={<CreatePost changePost={setPosts} />} />
+                <Route path="react/posts/:itemId" element={<PostInfo changePost={setPosts} favorites={favorites} setFavorites={setFavorites} />} />
+                <Route path="react/authFront" element={<UserAuth setUserToken={setUserToken} />} />
+                <Route path="react/createuser" element={<CreateUser setUserToken={setUserToken} />} />
+                <Route path='react/user/edit' element={<EditUser />} />
               </Routes>
             </UserContext.Provider>
           </PostsContext.Provider>
