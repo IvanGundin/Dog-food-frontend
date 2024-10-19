@@ -45,6 +45,7 @@ export const CreatePost = ({ changePost }) => {
                 <Grid item>
                     <TextField fullWidth multiline required label='Картинка https://...' name='image' variant='outlined' style={{ width: '15em' }} />
                 </Grid>
+                <a href="https://dogfood-web.tilda.ws/addformimage" style={{ color: 'blue', textDecoration: 'none' }}>загрузить картинку</a>
                 <Grid item>
                     <TextField
                         inputProps={{ pattern: "^(#{1}.{1,}){1,}$", title: 'Tags should contain #, e.g. #home #aboutme' }}
